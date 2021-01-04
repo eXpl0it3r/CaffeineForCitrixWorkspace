@@ -1,6 +1,6 @@
 ﻿namespace CaffeineV2
 {
-    partial class frmAbout
+    partial class FormAbout
     {
         /// <summary>
         /// Required designer variable.
@@ -85,7 +85,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Name = "frmAbout";
+            this.Name = "FormAbout";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "About:";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
