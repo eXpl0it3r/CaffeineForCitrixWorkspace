@@ -1,0 +1,42 @@
+name: CI
+
+on: [push, pull_request, workflow_dispatch]
+
+env:
+  DOTNET_CLI_TELEMETRY_OPTOUT: 1
+
+jobs:
+  build:
+    name: Windows .NET 6
+    runs-on: windows-2022
+
+    strategy:
+      fail-fast: false
+      matrix:
+        platform:
+          - { name: Windows, os: windows-2022 }
+        dotnet:
+          - { name: .NET 6, version: "6.0.x" }
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup .NET 6.0.x SDK
+        id: setup-dotnet
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: 6.0.x
+      - name: Enforce SDK Version
+        run: dotnet new globaljson --sdk-version ${{ steps.setup-dotnet.outputs.dotnet-version }} --force
+      - name: Verify SDK Installation
+        run: dotnet --info
+      - name: Install Dependencies
+        run: dotnet restore
+      - name: Build
+        run: dotnet build --configuration Release --no-restore
+      - name: Publish
+        run: dotnet publish --runtime win10-x86 --self-contained --configuration Release -p:PublishReadyToRun=true -p:PublishSingleFile=true -p:IncludeNativeLibrariesForSelfExtract=true -o Publish
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: Caffeine
+          path: Publish/
