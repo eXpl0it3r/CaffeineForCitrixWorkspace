@@ -1,17 +1,20 @@
-﻿using System.Windows.Forms;
+﻿using System.Diagnostics;
+using System.Windows.Forms;
 
-namespace Caffeine
+namespace Caffeine;
+
+public partial class FormAbout : Form
 {
-    public partial class FormAbout : Form
+    public FormAbout()
     {
-        public FormAbout()
-        {
-            InitializeComponent();
-        }
+        InitializeComponent();
+    }
 
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+    private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+    {
+        Process.Start(new ProcessStartInfo("https://github.com/eXpl0it3r/CaffeineForCitrixWorkspace")
         {
-            System.Diagnostics.Process.Start("https://www.thinscale.com/");
-        }
+            UseShellExecute = true
+        });
     }
 }

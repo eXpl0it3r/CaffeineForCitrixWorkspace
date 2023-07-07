@@ -4,28 +4,26 @@ using System.Threading;
 using System.Windows.Forms;
 
 [assembly: SupportedOSPlatform("windows")]
-namespace Caffeine
+
+namespace Caffeine;
+
+public static class Program
 {
-    public static class Program
+    [STAThread]
+    public static void Main()
     {
-        private static Mutex _mutex;
+        Application.EnableVisualStyles();
+        Application.SetCompatibleTextRenderingDefault(false);
 
-        [STAThread]
-        public static void Main()
+        using var mutex = new Mutex(true, "CaffeineForWorkspaceMutex", out var createdNew);
+
+        if (createdNew)
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-
-            _mutex = new Mutex(true, "CaffeineForWorkspaceMutex", out var createdNew);
-
-            if (createdNew)
-            {
-                Application.Run(new FormHidden());
-            }
-            else
-            {
-                MessageBox.Show("The application is already running.", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }
+            Application.Run(new FormHidden());
+        }
+        else
+        {
+            MessageBox.Show("The application is already running.", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
     }
 }

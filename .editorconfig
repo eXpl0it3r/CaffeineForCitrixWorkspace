@@ -1,0 +1,12 @@
+
+[*]
+
+# ReSharper properties
+resharper_align_multiline_array_and_object_initializer = true
+resharper_blank_lines_before_block_statements = 1
+resharper_blank_lines_before_control_transfer_statements = 1
+resharper_braces_for_ifelse = required
+resharper_csharp_max_line_length = 240
+resharper_instance_members_qualify_declared_in = 
+resharper_parentheses_redundancy_style = remove
+resharper_place_simple_initializer_on_single_line = false

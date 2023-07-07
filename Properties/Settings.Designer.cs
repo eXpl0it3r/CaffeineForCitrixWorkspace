@@ -33,8 +33,9 @@ namespace Caffeine.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("key values = https://learn.microsoft.com/en-us/dotnet/api/system.windows.forms.ke" +
-            "ys?view=windowsdesktop-6.0. The default if F15")]
+        [global::System.Configuration.DefaultSettingValueAttribute("key values =\n                https://learn.microsoft.com/en-us/dotnet/api/system." +
+            "windows.forms.keys?view=windowsdesktop-6.0. The\n                default if F15\n " +
+            "           ")]
         public string Setting {
             get {
                 return ((string)(this["Setting"]));
