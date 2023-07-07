@@ -5,9 +5,6 @@
     <TargetFramework>net6.0-windows</TargetFramework>
     <UseWindowsForms>true</UseWindowsForms>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
-
-    <RootNamespace>CaffeineV2</RootNamespace>
-    <AssemblyName>CaffeineV2</AssemblyName>
     <ApplicationIcon>Caffeine.ico</ApplicationIcon>
     <Configurations>Debug;Release</Configurations>
     <Platforms>win10-x86</Platforms>

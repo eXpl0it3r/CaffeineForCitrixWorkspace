@@ -1,4 +1,4 @@
-﻿namespace CaffeineV2
+﻿namespace Caffeine
 {
     partial class FormAbout
     {
@@ -37,7 +37,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::CaffeineV2.Properties.Resources.TSTTriangle;
+            this.pictureBox1.Image = global::Caffeine.Properties.Resources.TSTTriangle;
             this.pictureBox1.Location = new System.Drawing.Point(24, 33);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(34, 36);

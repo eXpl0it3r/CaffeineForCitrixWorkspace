@@ -1,6 +1,6 @@
 ﻿using System.Windows.Forms;
 
-namespace CaffeineV2
+namespace Caffeine
 {
     public partial class FormAbout : Form
     {

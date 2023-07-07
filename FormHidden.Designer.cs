@@ -1,4 +1,4 @@
-﻿namespace CaffeineV2
+﻿namespace Caffeine
 {
     partial class FormHidden
     {

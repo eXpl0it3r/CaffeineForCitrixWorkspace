@@ -6,9 +6,9 @@ using System.Linq;
 using System.Windows.Forms;
 
 using Microsoft.Win32;
-using static CaffeineV2.Properties.Settings;
+using static Caffeine.Properties.Settings;
 
-namespace CaffeineV2
+namespace Caffeine
 {
     public partial class FormHidden : Form
     {

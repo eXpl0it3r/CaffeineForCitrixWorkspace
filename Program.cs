@@ -4,7 +4,7 @@ using System.Threading;
 using System.Windows.Forms;
 
 [assembly: SupportedOSPlatform("windows")]
-namespace CaffeineV2
+namespace Caffeine
 {
     public static class Program
     {
